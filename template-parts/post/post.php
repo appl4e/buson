@@ -11,7 +11,7 @@
 <article class="blog_item">
   <div class="blog_item_img">
     <?php the_post_thumbnail('full', ['class' => 'card-img rounded-0', 'title' => 'Post featured image']); ?>
-    <a href="#" class="blog_item_date">
+    <a href="<?php the_permalink(); ?>" class="blog_item_date">
       <h3>
         <?php echo get_the_date('d'); ?>
       </h3>
@@ -21,7 +21,7 @@
     </a>
   </div>
   <div class="blog_details">
-    <a class="d-inline-block" href="single-blog.html">
+    <a class="d-inline-block" href="<?php the_permalink(); ?>">
       <h2>
         <?php the_title(); ?>
       </h2>
